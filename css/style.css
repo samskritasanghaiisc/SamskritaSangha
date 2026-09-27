@@ -1,7 +1,7 @@
 /* ==========================================================================
    Samskruta Sangha IISc — Core Design System
    ========================================================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&family=Crimson+Text:ital,wght@0,600;1,600&display=swap');
 :root {
   --bg-saffron: #FFF3D0;
   --bg-gold-tint: #FFE9A7;
@@ -52,18 +52,15 @@ header {
 }
 
 /* Force nav to span 100% viewport width without auto-centering margins */
-.main-nav,
-nav {
-  width: 100% !important;
-  max-width: 100% !important;  /* Overrides any leftover 1100px or 1200px limit */
-  margin: 0 !important;        /* Prevents auto-centering */
-  padding: 8px 24px;           /* Clean 24px padding from the screen edge */
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
+.nav-links a {
+  text-decoration: none;
+  color: #1C252C;
+  white-space: nowrap;
+  font-family: 'Yatra One', display;
+  font-size: 1.15rem; 
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
-
 /* Brand Anchor: Pinned directly to the left edge */
 .logo-container {
   display: flex !important;
