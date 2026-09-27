@@ -226,32 +226,125 @@
   </div>
 
 <script>
-    function inaugurate() {
-      // 1. Trigger the curtain parting animation
-      document.body.classList.add('is-opened');
+  function playMangalaSound() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      const ctx = new AudioCtx();
 
-      // 2. Play the auspicious chime
-      try {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.frequency.setValueAtTime(528, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 1.8);
-      } catch (e) {
-        // Fallback silently if autoplay audio policy intervenes
+      if (ctx.state === 'suspended') {
+        ctx.resume();
       }
 
-      // 3. Direct route to the official Samskruta Sangha site
-      setTimeout(() => {
-        window.location.href = "https://samskrutasanghaiisc.github.io/SamskrutaSangha/index.html";
-      }, 2200);
+      const t0 = ctx.currentTime;
+
+      // ── 1. ŚAṄKHA-NĀDA (Conch Drone with Natural Acoustic Harmonics) ──
+      // Fundamental pitch + low-pass warmth + subtle lip vibrato
+      const shankhaBase = 220; // Sacred A3 resonance
+      const shankhaGain = ctx.createGain();
+      const shankhaFilter = ctx.createBiquadFilter();
+      shankhaFilter.type = 'lowpass';
+      shankhaFilter.frequency.setValueAtTime(900, t0);
+
+      // Gentle tremolo/vibrato LFO to mimic human breath through a conch
+      const lfo = ctx.createOscillator();
+      const lfoGain = ctx.createGain();
+      lfo.frequency.setValueAtTime(4.8, t0);
+      lfoGain.gain.setValueAtTime(3.5, t0);
+      lfo.connect(shankhaGain.gain);
+      lfo.start(t0);
+      lfo.stop(t0 + 2.4);
+
+      [1, 1.5, 2, 3].forEach((harmonic, idx) => {
+        const osc = ctx.createOscillator();
+        osc.type = idx === 0 ? 'sine' : 'triangle';
+        osc.frequency.setValueAtTime(shankhaBase * harmonic, t0);
+
+        // Breath swell and slow divine taper
+        shankhaGain.gain.setValueAtTime(0.001, t0);
+        shankhaGain.gain.exponentialRampToValueAtTime(0.25, t0 + 0.5);
+        shankhaGain.gain.exponentialRampToValueAtTime(0.0001, t0 + 2.3);
+
+        osc.connect(shankhaFilter);
+        shankhaFilter.connect(shankhaGain);
+        shankhaGain.connect(ctx.destination);
+
+        osc.start(t0);
+        osc.stop(t0 + 2.3);
+      });
+
+      // ── 2. NĀDASVARAM FANFARE (Auspicious Melodic Ascent) ──
+      // Notes: Pa (392Hz) -> Dha (440Hz) -> Tara Sa (523Hz) -> Ri (587Hz) -> High Ga (659Hz)
+      const svaras = [
+        { freq: 392.00, start: 0.05, dur: 0.25 }, // Pa
+        { freq: 440.00, start: 0.30, dur: 0.25 }, // Dha
+        { freq: 523.25, start: 0.55, dur: 0.35 }, // Sa
+        { freq: 587.33, start: 0.90, dur: 0.30 }, // Ri
+        { freq: 659.25, start: 1.20, dur: 0.70 }  // Ga (Sustained peak)
+      ];
+
+      svaras.forEach(svara => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sawtooth'; // Reed timbre characteristic of Nādasvaram
+
+        const filter = ctx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(svara.freq, t0 + svara.start);
+        filter.Q.setValueAtTime(4.0, t0 + svara.start);
+
+        osc.frequency.setValueAtTime(svara.freq, t0 + svara.start);
+
+        gain.gain.setValueAtTime(0.001, t0 + svara.start);
+        gain.gain.exponentialRampToValueAtTime(0.18, t0 + svara.start + 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t0 + svara.start + svara.dur);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(t0 + svara.start);
+        osc.stop(t0 + svara.start + svara.dur);
+      });
+
+      // ── 3. MAṄGALA GHAṄṬĀ (Pure Bell Chimes) ──
+      // Metallic inharmonic spectrum: Fundamental + overtone partials
+      const bellPartials = [523.25, 1046.5, 1568, 2093, 2793];
+      bellPartials.forEach((freq, index) => {
+        const bellOsc = ctx.createOscillator();
+        const bellGain = ctx.createGain();
+
+        bellOsc.type = 'sine';
+        bellOsc.frequency.setValueAtTime(freq, t0);
+
+        const initialVol = 0.22 / (index + 1);
+        bellGain.gain.setValueAtTime(initialVol, t0);
+        bellGain.gain.exponentialRampToValueAtTime(0.0001, t0 + 2.4);
+
+        bellOsc.connect(bellGain);
+        bellGain.connect(ctx.destination);
+
+        bellOsc.start(t0);
+        bellOsc.stop(t0 + 2.4);
+      });
+
+    } catch (e) {
+      console.warn("Audio synthesis unsupported or blocked:", e);
     }
-  </script>
+  }
+
+  function inaugurate() {
+    // 1. Part the ceremonial velvet curtains
+    document.body.classList.add('is-opened');
+
+    // 2. Play Maṅgaladhvani (Auspicious Conch, Bell & Nadasvaram)
+    playMangalaSound();
+
+    // 3. Smooth transition to the official portal as the curtains clear
+    setTimeout(() => {
+      window.location.href = "https://samskrutasanghaiisc.github.io/SamskrutaSangha/index.html";
+    }, 2400);
+  }
+</script>
 
 </body>
 </html>
