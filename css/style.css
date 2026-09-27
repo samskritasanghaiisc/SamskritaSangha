@@ -56,58 +56,74 @@ body {
 }
 
 /* 1. Restored .main-nav container so links can push to the right */
+/* ── Sticky Full-Width Header Bar ── */
+.site-header, header {
+  background-color: #FFFFFF;
+  border-bottom: 3px solid var(--maroon-deep);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .main-nav {
   display: flex !important;
   flex-direction: row !important;
-  justify-content: space-between !important;
+  justify-content: space-between !important; /* Pushes child 1 (logo) left, child 2 (links) right */
   align-items: center !important;
   width: 100% !important;
-  padding: 10px 24px !important;
+  padding: 12px 24px !important;
+  box-sizing: border-box !important;
 }
 
-/* 2. Brand & Logo Anchors */
+/* Restrict the logo from taking up too much invisible space */
 .logo-container {
   display: flex !important;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important; 
 }
 
 .site-logo {
-  height: 52px;
-  width: auto;
-  max-width: 65px;
-  object-fit: contain;
-  display: block;
+  height: 52px !important;
+  width: auto !important;
+  object-fit: contain !important;
 }
 
-.logo-text, .hero-shloka, .verse-text, .hero-motto {
-  font-family: 'Yatra One', serif;
-  font-weight: normal;
-  font-size: 1.4rem; 
-  color: var(--maroon-deep);
-  white-space: nowrap;
+.logo-text {
+  font-family: 'Yatra One', serif !important; /* Keeping your Sanskrit logo text */
+  font-weight: normal !important;
+  font-size: 1.4rem !important; 
+  color: var(--maroon-deep) !important;
+  white-space: nowrap !important;
 }
 
-/* 3. The Navigation List (Pushed to the right) */
+/* Force the links to the right side */
 .nav-links {
   display: flex !important;
+  flex-direction: row !important;
   list-style: none !important;
-  gap: 15px !important;
+  gap: 20px !important;
+  margin: 0 0 0 auto !important; /* The ultimate override to push the block right */
+  padding: 0 !important;
   align-items: center !important;
-  margin-left: auto !important; /* Pushes everything to the right */
-  margin-bottom: 0 !important;
+  justify-content: flex-end !important;
 }
 
-/* 4. Large Samarkan Font for Tabs */
+/* Apply the LaTeX Font Stack */
 .nav-links a {
   text-decoration: none !important;
   color: #1C252C !important;
   white-space: nowrap !important;
-  font-family: 'Samarkan', sans-serif !important;
-  font-size: 1.7rem !important; /* Big, readable size */
-  font-weight: normal !important;
+  /* Computer Modern is the default LaTeX font */
+  font-family: "Computer Modern Serif", "Latin Modern Roman", "Crimson Text", "Times New Roman", serif !important;
+  font-size: 1.15rem !important; /* LaTeX fonts are narrower, so they fit much better on one line */
+  font-weight: 600 !important;
   letter-spacing: 0.5px !important;
+  transition: color 0.2s ease !important;
 }
 
 .nav-links a:hover,
