@@ -99,7 +99,11 @@ header {
   color: var(--maroon-deep);
   white-space: nowrap;
 }
-
+.logo-text, .hero-shloka, .verse-text, .hero-motto {
+  font-family: 'Yatra One', serif;
+  font-weight: normal;
+  font-size: 1.4rem; /* Adjust size as needed */
+}
 /* The Navigation List: Arranged in a horizontal row */
 .nav-links {
   display: flex;
@@ -461,7 +465,15 @@ footer {
   width: 100%;
 }
 @media (max-width: 768px) {
-  .main-nav { flex-direction: column; gap: 12px; }
+  /* .main-nav { flex-direction: column; gap: 12px; } */
+  .main-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center;
+  flex-wrap: nowrap !important; /* Prevents dropping to a new line */
+  width: 100% !important;
+}
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
