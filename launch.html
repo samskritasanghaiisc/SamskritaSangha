@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inauguration — Samskruta Sangha IISc</title>
+  <style>
+    :root {
+      --maroon-deep: #550000;
+      --maroon-curtain: #6A0000;
+      --gold-bright: #FFD54F;
+      --gold-dark: #C8961E;
+      --cream: #FFFDF8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Georgia', serif;
+      background-color: #1A0505;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Split Curtains (Left and Right Screens) ── */
+    .curtain {
+      position: fixed;
+      top: 0;
+      width: 50vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, #7A0808 0%, var(--maroon-curtain) 60%, var(--maroon-deep) 100%);
+      z-index: 10;
+      transition: transform 2.2s cubic-bezier(0.77, 0, 0.175, 1);
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+    }
+
+    .curtain-left {
+      left: 0;
+      border-right: 3px solid var(--gold-dark);
+      justify-content: flex-end;
+    }
+
+    .curtain-right {
+      right: 0;
+      border-left: 3px solid var(--gold-dark);
+      justify-content: flex-start;
+    }
+
+    /* Traditional vertical velvet pleat simulation */
+    .curtain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(255, 255, 255, 0.05) 25px,
+        rgba(0, 0, 0, 0.25) 50px
+      );
+      pointer-events: none;
+    }
+
+    /* ── Center Stage & Launch Trigger ── */
+    .stage-wrapper {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .institute-title {
+      color: var(--gold-bright);
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .brand-heading {
+      color: var(--cream);
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    }
+
+    .shloka-banner {
+      font-size: 1.5rem;
+      color: var(--gold-bright);
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    /* Gold Diya/Lamp Icon Container */
+    .emblem-preview {
+      width: 140px;
+      height: 140px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 36px;
+      border: 4px solid var(--gold-bright);
+      box-shadow: 0 0 35px rgba(255, 213, 79, 0.45);
+    }
+
+    .emblem-preview img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    /* ── The Launch Button ── */
+    .inaugurate-btn {
+      position: relative;
+      background: linear-gradient(135deg, #FFD54F 0%, #C8961E 100%);
+      color: var(--maroon-deep);
+      border: 2px solid #FFFDF8;
+      font-family: 'Georgia', serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 18px 46px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(200, 150, 30, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .inaugurate-btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 40px rgba(255, 213, 79, 0.7);
+    }
+
+    .inaugurate-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* ── Animation States When Opened ── */
+    body.is-opened .curtain-left {
+      transform: translateX(-100%);
+    }
+
+    body.is-opened .curtain-right {
+      transform: translateX(100%);
+    }
+
+    body.is-opened .stage-wrapper {
+      opacity: 0;
+      transform: scale(0.85);
+      pointer-events: none;
+    }
+
+    /* Background behind the curtains before redirect */
+    .revealed-portal {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--maroon-deep);
+    }
+
+    .opening-text {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      animation: pulse 1.2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { opacity: 0.6; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1.02); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Curtain Left -->
+  <div class="curtain curtain-left"></div>
+
+  <!-- Screen Curtain Right -->
+  <div class="curtain curtain-right"></div>
+
+  <!-- Foreground Launch Stage -->
+  <div class="stage-wrapper" id="stage">
+    <span class="institute-title">Indian Institute of Science</span>
+    <h1 class="brand-heading">Samskruta Sangha IISc</h1>
+
+    <div class="emblem-preview">
+      <img src="images/logo.png" alt="Sangha Logo" onerror="this.onerror=null; this.src='https://placehold.co/100x100?text=Logo';">
+    </div>
+
+    <button class="inaugurate-btn" id="launchBtn" onclick="inaugurate()">
+      ✨ Inaugurate Website ✨
+    </button>
+  </div>
+
+  <!-- The Portal Revealed in the Gap -->
+  <div class="revealed-portal">
+    <div class="opening-text">शुभमस्तु • Opening Portal...</div>
+  </div>
+
+<script>
+    function inaugurate() {
+      // 1. Trigger the curtain parting animation
+      document.body.classList.add('is-opened');
+
+      // 2. Play the auspicious chime
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.frequency.setValueAtTime(528, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 1.8);
+      } catch (e) {
+        // Fallback silently if autoplay audio policy intervenes
+      }
+
+      // 3. Direct route to the official Samskruta Sangha site
+      setTimeout(() => {
+        window.location.href = "https://samskrutasanghaiisc.github.io/SamskrutaSangha/index.html";
+      }, 2200);
+    }
+  </script>
+
+</body>
+</html>
