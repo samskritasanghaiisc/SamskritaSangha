@@ -877,3 +877,48 @@ footer {
   }
 }
 
+/* ── Alumni Simple Cards (No Photos) ── */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 1.25rem;
+}
+
+.alumni-card {
+  background: var(--card-white);
+  padding: 24px 24px;
+  border-radius: 6px;
+  border-left: 4px solid var(--maroon-deep);
+  box-shadow: 0 2px 8px rgba(106, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.alumni-name {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.alumni-dept {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.alumni-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--maroon-deep);
+  text-decoration: none;
+}
+
+.alumni-link:hover {
+  color: var(--saffron-terracotta);
+  text-decoration: underline;
+}
