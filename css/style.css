@@ -56,10 +56,9 @@ header {
   text-decoration: none;
   color: #1C252C;
   white-space: nowrap;
-  font-family: 'Yatra One', display;
-  font-size: 1.15rem; 
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-family: 'Crimson Text', serif; 
+   font-size: 1.1rem; 
+   font-weight: 600;
 }
 /* Brand Anchor: Pinned directly to the left edge */
 .logo-container {
