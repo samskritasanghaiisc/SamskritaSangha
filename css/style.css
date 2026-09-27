@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&family=Crimson+Text:ital,wght@0,600;1,600&display=swap');
+
 /* ==========================================================================
    Samskruta Sangha IISc — Core Design System
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&family=Crimson+Text:ital,wght@0,600;1,600&display=swap');
 :root {
   --bg-saffron: #FFF3D0;
   --bg-gold-tint: #FFE9A7;
