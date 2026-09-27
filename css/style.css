@@ -57,15 +57,22 @@ header {
 }
 
 /* Force nav to span 100% viewport width without auto-centering margins */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+  margin-left: auto; /* This forces the menu to the right side */
+}
+
 .nav-links a {
   text-decoration: none;
   color: #1C252C;
   white-space: nowrap;
-  
-  /* Apply the downloaded Samarkan font */
   font-family: 'Samarkan', sans-serif;
-  font-size: 1.25rem; 
-  letter-spacing: 0.5px;
+  font-size: 1.55rem; /* Increased size significantly */
+  font-weight: normal; /* Samarkan renders best at normal weight */
+  letter-spacing: 1px;
 }
 /* Brand Anchor: Pinned directly to the left edge */
 .logo-container {
@@ -126,13 +133,18 @@ header {
   margin-bottom: 4px;
 }
 .page-title, .block-title, .home-section-heading {
-  font-family: 'Georgia', serif;
+  font-family: 'Samarkan', serif;
   color: var(--maroon-deep);
-  font-weight: 800;
+  font-weight: normal; /* Prevents the font from blurring */
 }
-.page-title { font-size: 2.3rem; text-align: center; }
+.page-title { 
+  font-size: 3.2rem; /* Make the main heading much larger */
+  text-align: center; 
+}
 .page-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 30px; }
-.block-title { font-size: 1.85rem; }
+.block-title { 
+  font-size: 2.2rem; 
+}
 .home-block { margin-bottom: 48px; }
 .block-header { margin-bottom: 20px; }
 
