@@ -44,8 +44,7 @@ body {
    ========================================================================== */
 
 /* ── Sticky Full-Width Header Bar ── */
-.site-header,
-header {
+.site-header, header {
   background-color: #FFFFFF;
   border-bottom: 3px solid var(--maroon-deep);
   position: sticky;
@@ -56,74 +55,64 @@ header {
   padding: 0;
 }
 
-/* Force nav to span 100% viewport width without auto-centering margins */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  align-items: center;
-  margin-left: auto; /* This forces the menu to the right side */
+/* 1. Restored .main-nav container so links can push to the right */
+.main-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 10px 24px !important;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #1C252C;
-  white-space: nowrap;
-  font-family: 'Samarkan', sans-serif;
-  font-size: 1.55rem; /* Increased size significantly */
-  font-weight: normal; /* Samarkan renders best at normal weight */
-  letter-spacing: 1px;
-}
-/* Brand Anchor: Pinned directly to the left edge */
+/* 2. Brand & Logo Anchors */
 .logo-container {
   display: flex !important;
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
 }
 
 .site-logo {
-  height: 52px;       /* Increased from 42px/44px for clear visibility */
+  height: 52px;
   width: auto;
   max-width: 65px;
   object-fit: contain;
   display: block;
 }
 
-.logo-text {
-  font-family: 'Georgia', serif;
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--maroon-deep);
-  white-space: nowrap;
-}
 .logo-text, .hero-shloka, .verse-text, .hero-motto {
   font-family: 'Yatra One', serif;
   font-weight: normal;
-  font-size: 1.4rem; /* Adjust size as needed */
-}
-/* The Navigation List: Arranged in a horizontal row */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  align-items: center;
+  font-size: 1.4rem; 
+  color: var(--maroon-deep);
+  white-space: nowrap;
 }
 
-/* Individual Links */
+/* 3. The Navigation List (Pushed to the right) */
+.nav-links {
+  display: flex !important;
+  list-style: none !important;
+  gap: 15px !important;
+  align-items: center !important;
+  margin-left: auto !important; /* Pushes everything to the right */
+  margin-bottom: 0 !important;
+}
+
+/* 4. Large Samarkan Font for Tabs */
 .nav-links a {
-  text-decoration: none;
-  color: #1C252C;
-  font-size: 0.95rem;
-  font-weight: 700;
-  white-space: nowrap;
+  text-decoration: none !important;
+  color: #1C252C !important;
+  white-space: nowrap !important;
+  font-family: 'Samarkan', sans-serif !important;
+  font-size: 1.7rem !important; /* Big, readable size */
+  font-weight: normal !important;
+  letter-spacing: 0.5px !important;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #C83803;
+  color: var(--saffron-terracotta) !important;
 }
 /* ── 2. Common Typography & Structural Blocks ── */
 .container { width: 100%; max-width: 1100px; margin: 36px auto; padding: 0 20px; flex: 1 0 auto; }
