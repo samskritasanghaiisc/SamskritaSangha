@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home — Samskrita Sangha IISc</title>
   <!-- Cache-busting v=6 ensures instant stylesheet refresh -->
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
   <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -34,178 +35,120 @@
 <!-- ── Full-Bleed Hero Banner ── -->
 <!-- ── Full-Bleed Hero Banner with Foreground Building Image ── -->
 <!-- ── Split Hero Banner ── -->
-<section class="hero-split-banner">
+<!-- ── Full-Width Centered Hero Banner ── -->
+<section class="hero-centered-banner">
   
-  <!-- LEFT PANEL: Clean White Background for Brand & Emblem -->
-  <div class="hero-left-panel">
-    <span class="institute-badge">INDIAN INSTITUTE OF SCIENCE</span>
-    <h1 class="hero-title">Samskrita Sangha IISc</h1>
-    <div class="hero-emblem-wrap">
-      <img src="images/logo.png" alt="Samskrita Sangha Emblem" class="hero-emblem">
-    </div>
-  </div>
+  <!-- Background Image -->
+  <img src="images/main_building.jpg" alt="IISc Main Building" class="hero-bg-img" onerror="this.onerror=null; this.src='images/main_building.png';">
+  
+  <!-- Warm overlay to ensure text is readable -->
+  <div class="hero-overlay"></div>
 
-  <!-- RIGHT PANEL: Building Background + Shlokas -->
-  <div class="hero-right-panel">
-    <!-- Building Image restricted solely to this right container -->
-    <img src="images/main_building.jpg" 
-         alt="IISc Main Building" 
-         class="hero-bg-img" 
-         onerror="this.onerror=null; this.src='images/main_building.png';">
+  <!-- Centered Content Wrapper -->
+<div class="hero-content">
     
-    <!-- Warm overlay for text contrast -->
-    <div class="hero-overlay"></div>
+    <!-- Top Brand Section -->
+    <div class="hero-brand">
+      <img src="images/logo.png" alt="Samskrita Sangha Emblem" class="hero-emblem-center">
+      <div class="brand-text-container">
+        <span class="institute-badge-center">INDIAN INSTITUTE OF SCIENCE</span>
+        
+        <!-- Title and Motto -->
+        <div class="title-motto-row">
+          <h1 class="hero-title-center">Samskrita Sangha IISc</h1>
+          <!-- The divider line has been removed -->
+          <h2 class="hero-motto-devanagari">सा विद्या या विमुक्तये</h2>
+        </div>
 
-    <!-- Shlokas & Motto Layer -->
-    <div class="hero-verses-content">
-      <h2 class="hero-motto">सा विद्या या विमुक्तये</h2>
+      </div>
+    </div>
 
-      <div class="verse-card">
-        <p class="verse-text">
+    <!-- Bottom Shlokas Section -->
+    <div class="hero-verses-center">
+      <div class="verse-card-center">
+        <p class="verse-text-devanagari">
           भाषासु मुख्या मधुरा दिव्या गीर्वाणभारती।<br>
-          तस्यां हि काव्यं मधुरं तस्मादपि सुभाषितम् ॥
+          <span style="white-space: nowrap;">तस्यां हि काव्यं मधुरं तस्मादपि सुभाषितम् ॥</span>
         </p>
       </div>
 
-      <div class="verse-card verse-card-secondary">
-        <p class="verse-text">
+      <div class="verse-card-center">
+        <p class="verse-text-devanagari">
           वाक्यकारं वररुचिं भाष्यकारं पतञ्जलिम्।<br>
-          पाणिनिं सूत्रकारं च प्रणतोऽस्मि मुनित्रयम् ॥
+          <span style="white-space: nowrap;">पाणिनिं सूत्रकारं च प्रणतोऽस्मि मुनित्रयम् ॥</span>
         </p>
       </div>
     </div>
+    
   </div>
-
 </section>
 <main class="container">
 
-  <!-- ════════════ 1. UPCOMING TALKS (MAX 2) ════════════ -->
+ <!-- ════════════ 1. UPCOMING EVENTS (With Poster) ════════════ -->
   <section class="home-block">
     <div class="block-header">
-      <span class="section-label">Discourses</span>
-      <h2 class="block-title">Upcoming Talks</h2>
+      <span class="section-label">Join Us</span>
+      <h2 class="block-title">Upcoming Events</h2>
     </div>
 
-    <div class="grid-container">
-      <div class="card">
+   <div class="stacked-container">
+      <!-- Event 1: Poster Event (2nd October) -->
+      <!-- <div class="card" style="padding: 0; overflow: hidden;"> 
+        <img src="images/upcoming_event/1.jpeg" alt="Event Poster" class="event-poster">
         <div class="card-body">
-          <span class="card-date">Upcoming Date</span>
-          <h3 class="card-title">abc</h3>
-          <p class="card-text">abc</p>
-          <p class="card-location">📍 abc</p>
-          <a href="talks.html" class="card-action-link">View Details & Link →</a>
-        </div>
+          <span class="card-date">Friday, 2nd Oct</span>
+          <h3 class="card-title">Special Talk</h3>
+          <p class="card-text">Join us for our upcoming session. See the poster for full details.</p>
+        </div> -->
       </div>
 
+      <!-- Event 2: Tarka Sangraha (8th October) -->
       <div class="card">
         <div class="card-body">
-          <span class="card-date">Upcoming Date</span>
-          <h3 class="card-title">abc</h3>
-          <p class="card-text">abc</p>
-          <p class="card-location">📍 abc</p>
-          <a href="talks.html" class="card-action-link">View Details & Link →</a>
+          <span class="card-date">Thursday, 8th Oct</span>
+          <h3 class="card-title">Tarka Sangraha Class</h3>
+          <p class="card-text">A foundational class on the ancient Indian system of logic and epistemology.</p>
+          
+          <!-- YouTube Playlist Link -->
+          <a href="https://www.youtube.com/watch?v=RBqyLsJciYE&list=PLe-U9MSiIoERkcCXYyuhbjv1-VmKtIGOX" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="card-action-link" 
+             style="margin: 12px 0; display: inline-block; color: #CC0000;">
+            ▶ Watch Previous Lectures
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════════ 2. RECENT TALKS (MAX 2) ════════════ -->
+  <!-- ════════════ 2. WHY SAMSKRITAM? (Simplified) ════════════ -->
   <section class="home-block">
     <div class="block-header">
-      <span class="section-label">Archive</span>
-      <h2 class="block-title">Recent Talks</h2>
-    </div>
-
-    <div class="grid-container">
-      <!-- Talk 1 -->
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">19 August 2025</span>
-          <h3 class="card-title">Shri Arjun Bharadwaj</h3>
-          <p class="card-text">The essentials of Ramayana</p>
-          <a href="https://youtu.be/7UqmKLzYiPc?si=QE1mCLjQbvDYRQm2" target="_blank" rel="noopener noreferrer" class="card-action-link">
-            ▶ Watch on YouTube
-          </a>
-        </div>
-      </div>
-
-      <!-- Talk 2 -->
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">11 March 2025</span>
-          <h3 class="card-title">Shri Shashi Kiran BN</h3>
-          <p class="card-text">The Joy of Reading Classical Samskruta Poetry</p>
-          <a href="https://youtu.be/PZI6Raf_i-c?si=01FJ7WAdwQkR4XUf" target="_blank" rel="noopener noreferrer" class="card-action-link">
-            ▶ Watch on YouTube
-          </a>
-        </div>
-      </div>
+      <span class="section-label">The Language</span>
+      <h2 class="block-title">Why Samskritam?</h2>
     </div>
     
-    <div class="see-more-wrap">
-      <a href="talks.html" class="btn-see-more">View Full Talks Timeline →</a>
+    <div class="why-samskritam-box">
+      <p>Samskritam is more than just an ancient language - it is the key to India's vast heritage of knowledge. By learning it, we can directly read original texts on science, mathematics, logic, and philosophy without losing meaning in translation.</p>
+      
+      <p>For the IISc community, this language holds special value. Its highly logical, math-like grammar improves analytical thinking, while its precise pronunciation offers a sense of focus and calm in our busy academic lives.</p>
     </div>
   </section>
 
-  <!-- ════════════ 3. UPCOMING ACTIVITIES (MAX 2) ════════════ -->
+  <!-- ════════════ 3. OUR OBJECTIVES (Bullet Points) ════════════ -->
   <section class="home-block">
     <div class="block-header">
-      <span class="section-label">Workshops & Camps</span>
-      <h2 class="block-title">Upcoming Activities</h2>
+      <span class="section-label">Our Mission</span>
+      <h2 class="block-title">Objectives of the Sangha</h2>
     </div>
-
-    <div class="grid-container">
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">Upcoming</span>
-          <h3 class="card-title">abc</h3>
-          <p class="card-text">abc</p>
-          <p class="card-location">📍 abc</p>
-          <a href="activities.html" class="card-action-link">Registration Info →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">Upcoming</span>
-          <h3 class="card-title">abc</h3>
-          <p class="card-text">abc</p>
-          <p class="card-location">📍 abc</p>
-          <a href="activities.html" class="card-action-link">Registration Info →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 4. RECENT ACTIVITIES (MAX 2) ════════════ -->
-  <section class="home-block">
-    <div class="block-header">
-      <span class="section-label">Circles & Drives</span>
-      <h2 class="block-title">Recent Activities</h2>
-    </div>
-
-    <div class="grid-container">
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">Recent</span>
-          <h3 class="card-title">abc</h3>
-          <p class="card-text">abc</p>
-          <a href="activities.html" class="card-action-link">View Notes & Details →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">Recent</span>
-          <h3 class="card-title">abc</h3>
-          <p class="card-text">abc</p>
-          <a href="activities.html" class="card-action-link">View Notes & Details →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="see-more-wrap">
-      <a href="activities.html" class="btn-see-more">View All Activities & Notes →</a>
+    
+    <div class="why-samskritam-box" style="border-left-color: var(--maroon-deep);">
+      <ul class="objective-list">
+        <li>To cultivate a welcoming environment for students, faculty, and friends to learn and speak Samskritam on campus.</li>
+        <li>To bridge the gap between ancient Indian knowledge systems and modern scientific research.</li>
+        <li>To organize study circles, workshops, and expert talks that make Samskritam accessible to everyone, from beginners to advanced learners.</li>
+      </ul>
     </div>
   </section>
 <section class="quotes-banner">
