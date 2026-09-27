@@ -415,8 +415,9 @@ details[open].activity-accordion .accordion-arrow { transform: rotate(180deg); }
 }
 
 .member-name { 
-  font-size: 1.35rem; 
-  font-weight: 700; 
+  font-family: 'Samarkan', sans-serif;
+  font-size: 1.8rem; /* Make the names larger to match the cards */
+  font-weight: normal; 
   margin-bottom: 0.25rem; 
   color: var(--text-dark); 
 }
