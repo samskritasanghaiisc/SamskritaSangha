@@ -57,52 +57,6 @@ body {
 
 /* 1. Restored .main-nav container so links can push to the right */
 /* ── Sticky Full-Width Header Bar ── */
-.site-header, header {
-  background-color: #FFFFFF;
-  border-bottom: 3px solid var(--maroon-deep);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important; /* Pushes child 1 (logo) left, child 2 (links) right */
-  align-items: center !important;
-  width: 100% !important;
-  padding: 12px 24px !important;
-  box-sizing: border-box !important;
-}
-
-/* Restrict the logo from taking up too much invisible space */
-.logo-container {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  text-decoration: none !important;
-  flex-shrink: 0 !important; 
-}
-
-.site-logo {
-  height: 52px !important;
-  width: auto !important;
-  object-fit: contain !important;
-}
-
-.logo-text {
-  font-family: 'Yatra One', serif !important; /* Keeping your Sanskrit logo text */
-  font-weight: normal !important;
-  font-size: 1.4rem !important; 
-  color: var(--maroon-deep) !important;
-  white-space: nowrap !important;
-}
-
-/* Force the links to the right side */
-/* ── Desktop Defaults ── */
 /* Site Header Wrapper */
 .site-header {
   position: sticky;
@@ -121,23 +75,24 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 8px 20px;
+  position: relative;
 }
 
 /* Brand Link and Logo */
-.brand-link {
+.logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
 }
 
-.nav-logo {
+.site-logo {
   height: 52px;
   width: auto;
   display: block;
 }
 
-.brand-name {
+.logo-text {
   color: #FFFDF8;
   font-size: 1.35rem;
   font-weight: 700;
@@ -145,28 +100,35 @@ body {
 }
 
 /* Navigation List (Desktop Horizontal) */
-.nav-menu {
+.nav-links {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
 }
 
-.nav-menu li a {
+.nav-links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
   display: inline-block;
-  padding: 8px 14px;
+  padding: 8px 12px;
   color: #FFFDF8;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
   border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
   background-color: #850000;
   color: #FFD54F;
   font-weight: 700;
@@ -183,8 +145,13 @@ body {
   padding: 4px 8px;
 }
 
+/* Mobile Responsive Dropdown */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
 
-  .nav-menu {
+  .nav-links {
     display: none;
     position: absolute;
     top: 100%;
@@ -197,23 +164,22 @@ body {
     gap: 0;
   }
 
-  .nav-menu.is-active {
+  .nav-links.is-active {
     display: flex;
   }
 
-  .nav-menu li {
+  .nav-links li {
     width: 100%;
     text-align: center;
   }
 
-  .nav-menu li a {
+  .nav-links li a {
     display: block;
     padding: 12px 16px;
     border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-}
-/* ── Mobile Responsive Dropdown (Under 768px) ── */
+}/* ── Mobile Responsive Dropdown (Under 768px) ── */
 @media (max-width: 600px) {
   .event-horizontal-card {
     flex-direction: column !important;
