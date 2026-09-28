@@ -67,23 +67,22 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Nav Flexbox Container */
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 20px;
-  position: relative;
+  width: 100%;
+  padding: 8px 24px;
+  box-sizing: border-box;
 }
 
-/* Brand Link and Logo */
+/* ── Brand / Logo Left ── */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .site-logo {
@@ -99,11 +98,11 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Navigation List (Desktop Horizontal) */
+/* ── Navigation Links Pushed to the Right (Desktop) ── */
 .nav-links {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 auto; /* Forces the entire list to the far right */
   padding: 0;
   gap: 6px;
   align-items: center;
@@ -123,8 +122,8 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-links li a:hover,
@@ -134,7 +133,12 @@ body {
   font-weight: 700;
 }
 
-/* Mobile Hamburger Button (Hidden on Desktop) */
+/* Archives Link Distinction */
+.nav-links li a.archive-link {
+  color: #FFD54F;
+}
+
+/* ── Mobile Hamburger (Hidden on Desktop) ── */
 .nav-toggle {
   display: none;
   background: none;
@@ -145,7 +149,7 @@ body {
   padding: 4px 8px;
 }
 
-/* Mobile Responsive Dropdown */
+/* ── Mobile View (Below 900px) ── */
 @media (max-width: 900px) {
   .nav-toggle {
     display: block;
@@ -156,11 +160,12 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
+    width: 100%;
+    margin: 0;
     flex-direction: column;
     background-color: #6A0000;
-    padding: 12px 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
     gap: 0;
   }
 
@@ -179,6 +184,7 @@ body {
     border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
+}
 }/* ── Mobile Responsive Dropdown (Under 768px) ── */
 @media (max-width: 600px) {
   .event-horizontal-card {
