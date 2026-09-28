@@ -12,29 +12,24 @@
 <body>
 
 <header class="site-header">
-  <nav class="nav-container">
-    <!-- Brand / Big Logo on the Left -->
+  <nav class="main-nav">
     <a href="index.html" class="logo-container">
       <img src="images/logo.png" alt="Samskrita Sangha Logo" class="site-logo">
       <span class="logo-text">संस्कृतसङ्घः IISc</span>
     </a>
-
-    <!-- Mobile Hamburger Toggle (Appears only on mobile) -->
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-      <span class="hamburger-icon">☰</span>
-    </button>
-
-    <!-- Nav Links Pushed to the Right -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="talks.html">Invited Talks</a></li>
-      <li><a href="activities.html">Events &amp; Gallery</a></li>
-      <li><a href="classes.html">Classes</a></li>
-      <li><a href="members.html">Members</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="http://web.archive.org/web/20170722154224/http://ssangha.sanskritdocuments.org/home/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer" class="archive-link">Archives ↗</a></li>
-    </ul>
+<ul class="nav-links">
+  <li><a href="index.html" class = "active">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="talks.html">Invited Talks</a></li>
+  <li><a href="activities.html">Events & Gallery</a></li>
+  <!-- <li><a href="resources.html">Resources</a></li> -->
+  <!-- <li><a href="blogs.html">Blog</a></li>
+  <li><a href="#" class="disabled-nav-link" title="Coming Soon">Blog</a></li> -->
+  <li><a href="classes.html">Classes</a></li>
+  <li><a href="members.html">Members</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="http://web.archive.org/web/20170722154224/http://ssangha.sanskritdocuments.org/home/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer" class="archive-link">Archives ↗</a></li>
+</ul>
   </nav>
 </header>
 
@@ -91,56 +86,42 @@
 <main class="container">
 
  <!-- ════════════ 1. UPCOMING EVENTS (With Poster) ════════════ -->
-<section class="section-container" style="max-width: 900px; margin: 30px auto; padding: 0 16px;">
+  <section class="home-block">
+    <div class="block-header">
+      <span class="section-label">Join Us</span>
+      <h2 class="block-title">Upcoming Events</h2>
+    </div>
 
-<!-- SECTION 1: UPCOMING TALKS -->
-  <div class="stacked-container" style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 36px;">
-    
-    <div class="card event-horizontal-card" style="display: flex; flex-direction: row; align-items: stretch; background: #fff; border: 1px solid #E0D5C1; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
-      
-      <!-- Speaker Image / Avatar Box (Left) -->
-      <div style="flex: 0 0 180px; min-width: 160px; max-width: 200px; background: #FAF7F2; display: flex; align-items: center; justify-content: center; border-right: 1px solid #EFE6D5;">
-        <img 
-          src="images/upcoming_event/02Oct26.jpeg" 
-          alt="Sri Ramanacharanatirtha Swami" 
-          style="width: 100%; height: 100%; min-height: 180px; object-fit: cover; display: block;"
-          onerror="this.onerror=null; this.src='images/logo.png';"
-        >
+   <div class="stacked-container">
+      <!-- Event 1: Poster Event (2nd October) -->
+      <!-- <div class="card" style="padding: 0; overflow: hidden;"> 
+        <img src="images/upcoming_event/1.jpeg" alt="Event Poster" class="event-poster">
+        <div class="card-body">
+          <span class="card-date">Friday, 2nd Oct</span>
+          <h3 class="card-title">Special Talk</h3>
+          <p class="card-text">Join us for our upcoming session. See the poster for full details.</p>
+        </div> -->
       </div>
 
-      <!-- Event Details (Right) -->
-      <div class="card-body" style="flex: 1; padding: 18px 24px; display: flex; flex-direction: column; justify-content: center;">
-        <span class="card-date" style="display: inline-block; width: fit-content; font-size: 0.82rem; font-weight: 700; color: #8A5A00; background: #FFF3D0; padding: 3px 10px; border-radius: 4px; margin-bottom: 8px;">
-          🗓️ Friday, 2nd Oct • 11:00 AM
-        </span>
-        
-        <h3 class="card-title" style="font-size: 1.3rem; color: #6A0000; margin: 0 0 4px 0;">
-          Importance of Saṁskr̥taṁ for śāstras
-        </h3>
-
-        <div style="font-size: 0.98rem; font-weight: 600; color: #444; margin-bottom: 8px;">
-          Speaker: <span style="color: #222;">Sri Ramanacharanatirtha Swami</span>
-        </div>
-
-        <p class="card-text" style="color: #555; font-size: 0.95rem; line-height: 1.5; margin: 0 0 12px 0;">
-          Join us for an insightful session exploring the vital role of Sanskrit in understanding traditional Indian sciences and philosophical discourses.
-        </p>
-
-        <div>
-          <a href="https://www.iisc.ac.in/wp-content/uploads/2026/09/Poster-link-Sept-2026.jpg" 
+      <!-- Event 2: Tarka Sangraha (8th October) -->
+      <div class="card">
+        <div class="card-body">
+          <span class="card-date">Thursday, 8th Oct</span>
+          <h3 class="card-title">Tarka Sangraha Class</h3>
+          <p class="card-text">A foundational class on the ancient Indian system of logic and epistemology.</p>
+          
+          <!-- YouTube Playlist Link -->
+          <a href="https://www.youtube.com/watch?v=RBqyLsJciYE&list=PLe-U9MSiIoERkcCXYyuhbjv1-VmKtIGOX" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="card-action-link" 
-             style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; color: #6A0000; text-decoration: none; border: 1px solid #6A0000; padding: 6px 14px; border-radius: 4px; transition: background 0.2s ease;">
-            📄 View Poster ↗
+             style="margin: 12px 0; display: inline-block; color: #CC0000;">
+            ▶ Watch Previous Lectures
           </a>
         </div>
       </div>
-
     </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- ════════════ 2. WHY SAMSKRITAM? (Simplified) ════════════ -->
   <section class="home-block">
@@ -217,16 +198,6 @@
       }, 6000);
     }
   });
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('is-active');
-      navToggle.querySelector('.hamburger-icon').textContent = 
-        navMenu.classList.contains('is-active') ? '✕' : '☰';
-    });
-  }
 </script>
 
 </body>
