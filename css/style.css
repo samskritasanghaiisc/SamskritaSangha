@@ -471,47 +471,56 @@ footer {
   width: 100%;
 }
 @media (max-width: 768px) {
-  /* .main-nav { flex-direction: column; gap: 12px; } */
+  /* Stack the logo on top and the menu on the bottom */
   .main-nav, nav {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  flex-wrap: nowrap !important; /* Absolutely prevents dropping to a new line */
-  width: 100% !important;
-  padding: 10px 24px !important;
-}
-.nav-links {
-  display: flex !important;
-  flex-direction: row !important;
-  list-style: none !important;
-  gap: 14px !important; /* Reduced from 25px to save horizontal space */
-  align-items: center !important;
-  margin-left: auto !important; /* Forces the block to the right */
-  margin-bottom: 0 !important;
-}
+    display: flex !important;
+    flex-direction: column !important; /* Changed from row to column */
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 16px 16px 5px 16px !important;
+    gap: 15px !important;
+  }
+  
+  /* Make the links a swipeable horizontal row */
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important; /* Enables horizontal scrolling/swiping */
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    margin: 0 !important;
+    padding-bottom: 12px !important; /* Breathing room for the scrollbar */
+    -webkit-overflow-scrolling: touch; /* Smooth swiping on iOS */
+  }
 
-/* 3. Make the Samarkan font much larger */
-.nav-links a {
-  text-decoration: none !important;
-  color: #1C252C !important;
-  white-space: nowrap !important;
-  font-family: 'Samarkan', sans-serif !important;
-  font-size: 1.7rem !important; /* Significantly increased size */
-  font-weight: normal !important;
-  letter-spacing: 0.5px !important;
-}
+  /* Optional: Styles the mobile scrollbar neatly */
+  .nav-links::-webkit-scrollbar {
+    height: 3px;
+  }
+  .nav-links::-webkit-scrollbar-thumb {
+    background: rgba(200, 56, 3, 0.4); 
+    border-radius: 4px;
+  }
 
-.nav-links a:hover {
-  color: var(--saffron-terracotta);
-}
+  /* Restore the clean, readable font for mobile links */
+  .nav-links a {
+    text-decoration: none !important;
+    color: #1C252C !important;
+    white-space: nowrap !important; /* Prevents text from breaking onto two lines */
+    font-family: "Computer Modern Serif", "Latin Modern Roman", "Crimson Text", "Times New Roman", serif !important; /* Removed Samarkan */
+    font-size: 1.15rem !important; /* Scaled down for mobile */
+    font-weight: 600 !important;
+  }
 
-/* Active Page Highlight: Terracotta badge with white bold text */
-.nav-links a.active {
-  background-color: var(--saffron-terracotta) !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 2px 6px rgba(200, 56, 3, 0.25);
-}
+  .nav-links a.active {
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+
+  /* (Leave your other mobile rules for hero-heading, timeline, etc. down here) */
   .hero-heading { font-size: 2.1rem; }
   .hero-shloka { font-size: 0.95rem; padding: 10px 16px; }
   .timeline { padding-left: 28px; }
