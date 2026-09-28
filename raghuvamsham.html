@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Classes — Samskrita Sangha IISc</title>
+  <link rel="stylesheet" href="css/style.css?v=30">
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Custom Styling for Tarka Definitions ── */
+    .definition-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .def-card {
+      background: var(--card-white);
+      border: 1.5px solid var(--border-subtle);
+      border-left: 5px solid var(--maroon-deep);
+      border-radius: 6px;
+      padding: 24px 28px;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-left-color 0.2s ease;
+    }
+    .def-card:hover {
+      transform: translateY(-2px);
+      border-left-color: var(--saffron-terracotta);
+    }
+    .def-title {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--saffron-terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+    .def-sanskrit {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--maroon-deep);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .def-note {
+      font-size: 1.02rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="main-nav">
+    <a href="index.html" class="logo-container">
+      <img src="images/logo.png" alt="Samskrita Sangha Logo" class="site-logo">
+      <span class="logo-text">संस्कृतसङ्घः IISc</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="talks.html">Invited Talks</a></li>
+      <li><a href="activities.html">Events & Gallery</a></li>
+      <li><a href="classes.html" class="active">Weekly Classes</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="http://web.archive.org/web/20170722154224/http://ssangha.sanskritdocuments.org/home/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer" class="archive-link">Archives ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <div style="text-align: center; margin-bottom: 40px;">
+    <span class="section-label">Swadhyaya & Textual Analysis</span>
+    <h1 class="page-title">Weekly Classes <span class="devanagari-text" style="font-size: 2.2rem; color: var(--maroon-deep);">(साप्ताहिक-वर्गाः)</span></h1>
+    <p class="page-subtitle" style="margin-top: 8px;">Key definitions, epistemological concepts, and logical frameworks studied during our weekly sessions.</p>
+    <div style="width: 60px; height: 3px; background: var(--saffron-terracotta); margin: 12px auto 0; border-radius: 2px;"></div>
+  </div>
+
+  <!-- Tarka Sangraha Core Definitions Section -->
+  <div class="home-block">
+    <div class="block-header" style="text-align: center; margin-bottom: 30px;">
+      <span class="section-label">Logical Framework</span>
+      <h2 class="block-title" style="font-size: 1.9rem;">Tarka Sangraha: Core Definitions</h2>
+    </div>
+
+    <div class="definition-container">
+      
+      <!-- 1 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Padarthatvam</div>
+        <div class="def-sanskrit">ऽभिधेयत्वं पदार्थसामान्यलक्षणम्</div>
+        <div class="def-note">The general characteristic of being a knowable/nameable entity (Padartha) is its knowability.</div>
+      </div>
+
+      <!-- 2 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Avyapti (Too Narrow Definition)</div>
+        <div class="def-sanskrit">लक्ष्यैकदेशावृत्तित्वमव्याप्तिः</div>
+        <div class="def-note">Avyapti occurs when a definition fails to apply to a part of the intended target class.</div>
+      </div>
+
+      <!-- 3 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Ativyapti (Overly Broad Definition)</div>
+        <div class="def-sanskrit">अलक्ष्यवृत्तित्वमतिव्याप्तिः लक्षणस्य वर्तनमतिव्याप्तिः</div>
+        <div class="def-note">Ativyapti occurs when a definition improperly extends to items outside the intended target class.</div>
+      </div>
+
+      <!-- 4 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Asambhava (Impossible Definition)</div>
+        <div class="def-sanskrit">लक्ष्यमात्राऽवर्तनमसम्भवः</div>
+        <div class="def-note">Asambhava occurs when the defined characteristic does not exist anywhere within the target class.</div>
+      </div>
+
+      <!-- 5 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Lakshanam (Valid Definition)</div>
+        <div class="def-sanskrit">एतद्दूषणत्रयरहितो धर्मो लक्षणम्</div>
+        <div class="def-note">A valid definition is a characteristic completely free from the three logical flaws (Avyapti, Ativyapti, and Asambhava).</div>
+      </div>
+
+      <!-- 6 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Asaadhaaranatvam</div>
+        <div class="def-sanskrit">लक्ष्यतावच्छेदकसमनियतत्वमसाधारणत्वम्</div>
+        <div class="def-note">The quality of being an extraordinary or exclusive qualifier coterminous with the target boundary.</div>
+      </div>
+
+      <!-- 7 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Lakshanam (Refined)</div>
+        <div class="def-sanskrit">व्यावृत्तावभिधेयत्वादौ चातिव्याप्तिवारणाय तद्भिन्नत्वं धर्मविशेषणं</div>
+        <div class="def-note">Refined to exclude ativyapti from vyavrutti by introducing distinct qualifying conditions.</div>
+      </div>
+
+      <!-- 8 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Dravyam (Substance)</div>
+        <div class="def-sanskrit">द्रव्यत्वजातिमत्त्वं गुणवत्त्वं वा द्रव्यसामान्यलक्षणम्</div>
+        <div class="def-note">The general definition of a substance is possessing the universal attribute of 'Dravyatva' or possessing qualities (guna).</div>
+      </div>
+
+      <!-- 9 -->
+      <div class="def-card">
+        <div class="def-title">Definition of Dravyam (Refined)</div>
+        <div class="def-sanskrit">गुणसमानाधिकरणसत्ताभिन्नजातिमत्त्वम्</div>
+        <div class="def-note">Refined definition to resolve the logical flaw where qualities do not exist simultaneously with the substance during its initial creation and final destruction.</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</main>
+
+<footer>
+  <p>© 2026 Samskrita Sangha, Indian Institute of Science, Bengaluru</p>
+</footer>
+
+</body>
+</html>
