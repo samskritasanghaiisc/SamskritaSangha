@@ -229,7 +229,7 @@ body {
 }
 .card-body { padding: 22px 26px; display: flex; flex-direction: column; gap: 8px; }
 .card-date, .table-date {
-  font-size: 0.82rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--maroon-deep);
   background: var(--bg-gold-tint);
@@ -1119,4 +1119,136 @@ footer {
   border-radius: 6px;
   font-size: 0.95rem;
   color: var(--text-dark);
+}
+
+
+
+/* ── Event Image Galleries (activities.html) ── */
+.event-gallery-section {
+  background: var(--card-white);
+  border-left: 5px solid var(--maroon-deep);
+  padding: 28px 32px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 32px;
+}
+
+/* ── Event Image Galleries ── */
+.event-gallery-desc {
+  font-size: 1.15rem; /* Increased from 1.05rem */
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+details.year-accordion {
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+details.year-accordion:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+summary.year-header {
+  font-size: 1.15rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding: 14px 0;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+summary.year-header::-webkit-details-marker {
+  display: none;
+}
+
+summary.year-header:hover {
+  color: var(--saffron-terracotta);
+}
+
+/* Styling for the active/open year tab */
+details[open].year-accordion summary.year-header {
+  color: var(--saffron-terracotta);
+  border-bottom: 2px solid var(--saffron-terracotta);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(106, 0, 0, 0.1);
+  background-color: #f4f4f4; /* Placeholder color before image loads */
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+/* ── Static Year Headers (No Drop-downs) ── */
+.year-section {
+  margin-bottom: 30px;
+}
+
+/* ── Static Year Headers ── */
+h3.year-header {
+  font-size: 1.25rem; /* Increased from 1.15rem */
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--saffron-terracotta);
+  border-bottom: 2px solid var(--saffron-terracotta);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: fit-content;
+  line-height: 1.4; /* Gives multi-line headers a bit more breathing room */
+}
+
+/* ── Fixed Image Grid (No Cropping) ── */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 250px; /* Changed from auto to force a uniform box size */
+  object-fit: contain; /* Automatically centers the image inside the 250px box without cropping */
+  border-radius: 6px;
+  border: 1px solid rgba(106, 0, 0, 0.1);
+  background-color: #f4f4f4; /* Acts as a clean, even frame around the landscape images */
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+/* ── Disabled/Inactive Navigation Link ── */
+.disabled-nav-link {
+  pointer-events: none !important; /* Disables clicking */
+  color: #B0BEC5 !important; /* Grays out the text */
+  cursor: default !important;
+  opacity: 0.6;
+}
+
+
+.devanagari-text {
+  font-family: 'Noto Serif Devanagari', serif !important;
 }
