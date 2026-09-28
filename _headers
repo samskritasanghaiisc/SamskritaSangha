@@ -1,0 +1,6 @@
+# Force browsers to always revalidate CSS and HTML files
+/*.css
+  Cache-Control: no-cache, must-revalidate
+
+/*.html
+  Cache-Control: no-cache, must-revalidate
