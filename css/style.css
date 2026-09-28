@@ -1314,3 +1314,27 @@ h3.year-header {
     white-space: normal !important; 
   }
 }
+
+/* ── Global Fix for Lists and Card Text ── */
+ul, ol, li, .def-card, .def-note, table {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+}
+
+/* ── Custom Control for Chandas List Notes & Descriptions ── */
+.chandas-note-title {
+  font-family: 'Segoe UI', system-ui, sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--maroon-deep) !important;
+}
+
+.chandas-bullet-list {
+  font-family: 'Segoe UI', system-ui, sans-serif !important;
+  font-size: 1.02rem !important;
+  line-height: 1.8 !important;
+  color: var(--text-dark) !important;
+}
+
+.chandas-bullet-list li {
+  margin-bottom: 8px !important;
+}
