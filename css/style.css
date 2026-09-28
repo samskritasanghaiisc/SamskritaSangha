@@ -124,6 +124,18 @@ body {
 }
 
 /* ── Mobile Responsive Dropdown (Under 768px) ── */
+@media (max-width: 600px) {
+  .event-horizontal-card {
+    flex-direction: column !important;
+  }
+  .event-horizontal-card > div:first-child {
+    flex: none !important;
+    max-width: 100% !important;
+    height: 180px;
+    border-right: none !important;
+    border-bottom: 1px solid #EFE6D5;
+  }
+}
 @media (max-width: 768px) {
   .nav-toggle {
     display: block; /* Visible on mobile */
