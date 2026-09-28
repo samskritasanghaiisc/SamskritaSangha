@@ -1261,3 +1261,35 @@ h3.year-header {
 .devanagari-text {
   font-family: 'Noto Serif Devanagari', serif !important;
 }
+
+@media (max-width: 768px) {
+  .hero-centered-banner {
+    padding: 30px 15px 50px 15px !important; 
+    min-height: auto !important; /* Allows the box to adapt to the stacked height */
+  }
+  
+  .hero-title-center {
+    font-size: 2.2rem !important; /* Stops the title from overflowing the screen */
+  }
+  
+  .hero-motto-devanagari {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-content {
+    gap: 20px !important;
+  }
+  
+  .verse-card-center {
+    padding: 16px 12px !important;
+  }
+  
+  .verse-text-devanagari {
+    font-size: 1.25rem !important;
+  }
+
+  /* Overrides the inline 'nowrap' so long shlokas can break into multiple lines on phones */
+  .verse-text-devanagari span {
+    white-space: normal !important; 
+  }
+}
