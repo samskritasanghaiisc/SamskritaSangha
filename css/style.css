@@ -1338,3 +1338,14 @@ ul, ol, li, .def-card, .def-note, table {
 .chandas-bullet-list li {
   margin-bottom: 8px !important;
 }
+
+/* ── Unified Clean Typography (Matching your preferred style) ── */
+body, p, li, table, .def-card, .def-note, .chandas-bullet-list, .chandas-note-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-weight: normal;
+}
+
+/* Ensure traditional Sanskrit text retains its classic Devanagari script font */
+.devanagari-text, .def-sanskrit {
+  font-family: 'Noto Serif Devanagari', serif !important;
+}
