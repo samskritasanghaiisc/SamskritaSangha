@@ -86,42 +86,95 @@
 <main class="container">
 
  <!-- ════════════ 1. UPCOMING EVENTS (With Poster) ════════════ -->
-  <section class="home-block">
-    <div class="block-header">
-      <span class="section-label">Join Us</span>
-      <h2 class="block-title">Upcoming Events</h2>
-    </div>
+<section class="section-container" style="max-width: 900px; margin: 30px auto; padding: 0 16px;">
 
-   <div class="stacked-container">
-      <!-- Event 1: Poster Event (2nd October) -->
-      <!-- <div class="card" style="padding: 0; overflow: hidden;"> 
-        <img src="images/upcoming_event/1.jpeg" alt="Event Poster" class="event-poster">
-        <div class="card-body">
-          <span class="card-date">Friday, 2nd Oct</span>
-          <h3 class="card-title">Special Talk</h3>
-          <p class="card-text">Join us for our upcoming session. See the poster for full details.</p>
-        </div> -->
+  <!-- SECTION 1: UPCOMING TALKS -->
+  <h2 class="block-title" style="margin-bottom: 16px; border-bottom: 2px solid #6A0000; padding-bottom: 6px; color: #6A0000;">
+    Upcoming Talks
+  </h2>
+
+  <div class="stacked-container" style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;">
+    
+    <!-- Event 1: Poster Event (2nd October) -->
+    <div class="card" style="border: 1px solid #E0D5C1; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
+      
+      <!-- Poster Image -->
+      <div style="width: 100%; max-height: 380px; overflow: hidden; background: #FAF7F2; display: flex; justify-content: center; align-items: center;">
+        <img 
+          src="images/upcoming_event/02Oct26.jpeg" 
+          alt="Importance of Saṁskr̥taṁ for śaastraas Poster" 
+          style="width: 100%; height: auto; max-height: 380px; object-fit: contain; display: block;"
+          onerror="this.onerror=null; this.src='https://placehold.co/800x380?text=Event+Poster';"
+        >
       </div>
 
-      <!-- Event 2: Tarka Sangraha (8th October) -->
-      <div class="card">
-        <div class="card-body">
-          <span class="card-date">Thursday, 8th Oct</span>
-          <h3 class="card-title">Tarka Sangraha Class</h3>
-          <p class="card-text">A foundational class on the ancient Indian system of logic and epistemology.</p>
-          
-          <!-- YouTube Playlist Link -->
-          <a href="https://www.youtube.com/watch?v=RBqyLsJciYE&list=PLe-U9MSiIoERkcCXYyuhbjv1-VmKtIGOX" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="card-action-link" 
-             style="margin: 12px 0; display: inline-block; color: #CC0000;">
-            ▶ Watch Previous Lectures
-          </a>
+      <!-- Card Content -->
+      <div class="card-body" style="padding: 20px 24px;">
+        <span class="card-date" style="display: inline-block; font-size: 0.85rem; font-weight: 700; color: #8A5A00; background: #FFF3D0; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;">
+          🗓️ Friday, 2nd Oct • 11:00 AM
+        </span>
+        
+        <h3 class="card-title" style="font-size: 1.4rem; color: #6A0000; margin: 0 0 6px 0;">
+          Importance of Saṁskr̥taṁ for śāstras
+        </h3>
+
+        <div style="font-size: 1.05rem; font-weight: 600; color: #444; margin-bottom: 12px;">
+          Speaker: <span style="color: #222;">Sri Ramanacharanatirtha Swami</span>
         </div>
+
+        <p class="card-text" style="color: #555; line-height: 1.6; margin-bottom: 16px;">
+          Join us for an insightful session exploring the vital role of Sanskrit in understanding traditional Indian sciences and philosophical discourses.
+        </p>
+
+        <a href="https://www.iisc.ac.in/wp-content/uploads/2026/09/Poster-link-Sept-2026.jpg" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="card-action-link" 
+           style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #6A0000; text-decoration: none; border: 1px solid #6A0000; padding: 8px 16px; border-radius: 4px; transition: background 0.2s ease;">
+          📄 View Full Resolution Poster ↗
+        </a>
       </div>
     </div>
-  </section>
+
+  </div>
+
+
+  <!-- SECTION 2: UPCOMING ACTIVITIES -->
+  <h2 class="block-title" style="margin-bottom: 16px; border-bottom: 2px solid #6A0000; padding-bottom: 6px; color: #6A0000;">
+    Upcoming Activities
+  </h2>
+
+  <div class="stacked-container" style="display: flex; flex-direction: column; gap: 24px;">
+    
+    <!-- Event 2: Tarka Sangraha (8th October) -->
+    <div class="card" style="border: 1px solid #E0D5C1; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 24px;">
+      <div class="card-body" style="padding: 0;">
+        <span class="card-date" style="display: inline-block; font-size: 0.85rem; font-weight: 700; color: #8A5A00; background: #FFF3D0; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;">
+          🗓️ Thursday, 8th Oct
+        </span>
+
+        <h3 class="card-title" style="font-size: 1.35rem; color: #6A0000; margin: 0 0 10px 0;">
+          Tarka-Saṁgrahaḥ Study Circle
+        </h3>
+
+        <p class="card-text" style="color: #555; line-height: 1.6; margin-bottom: 18px;">
+          A foundational study session on the classical Nyāya-Vaiśeṣika system of logic, epistemology, and argumentation.
+        </p>
+
+        <!-- YouTube Playlist Action Link -->
+        <a href="https://www.youtube.com/watch?v=RBqyLsJciYE&list=PLe-U9MSiIoERkcCXYyuhbjv1-VmKtIGOX" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="card-action-link" 
+           style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #fff; background: #CC0000; padding: 8px 16px; border-radius: 4px; text-decoration: none; box-shadow: 0 2px 6px rgba(204,0,0,0.3);">
+          ▶ Watch Previous Lectures on YouTube
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
   <!-- ════════════ 2. WHY SAMSKRITAM? (Simplified) ════════════ -->
   <section class="home-block">
