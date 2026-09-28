@@ -1262,13 +1262,13 @@ h3.year-header {
   font-family: 'Noto Serif Devanagari', serif !important;
 }
 
-/* ── Mobile Fixes for the Front Page Hero Section ── */
 @media (max-width: 768px) {
   .hero-centered-banner {
-    display: block !important; 
-    min-height: auto !important; /* Forces the box to shrink-wrap the content */
+    display: flex !important;
+    flex-direction: column !important;
     height: auto !important;
-    padding: 40px 15px 40px 15px !important; 
+    min-height: fit-content !important; /* Shrink-wraps exactly to the content height */
+    padding: 30px 15px 40px 15px !important; 
   }
   
   .hero-content {
