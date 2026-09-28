@@ -102,33 +102,71 @@ body {
 }
 
 /* Force the links to the right side */
-.nav-links {
-  display: flex !important;
-  flex-direction: row !important;
-  list-style: none !important;
-  gap: 20px !important;
-  margin: 0 0 0 auto !important; /* The ultimate override to push the block right */
-  padding: 0 !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
+/* ── Desktop Defaults ── */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* Apply the LaTeX Font Stack */
-.nav-links a {
-  text-decoration: none !important;
-  color: #1C252C !important;
-  white-space: nowrap !important;
-  /* Computer Modern is the default LaTeX font */
-  font-family: "Computer Modern Serif", "Latin Modern Roman", "Crimson Text", "Times New Roman", serif !important;
-  font-size: 1.15rem !important; /* LaTeX fonts are narrower, so they fit much better on one line */
-  font-weight: 600 !important;
-  letter-spacing: 0.5px !important;
-  transition: color 0.2s ease !important;
+.nav-toggle {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 6px 10px;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--saffron-terracotta) !important;
+/* ── Mobile Responsive Dropdown (Under 768px) ── */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Visible on mobile */
+  }
+
+  .nav-menu {
+    display: none; /* Closed by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #6A0000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  /* When the toggle button is clicked */
+  .nav-menu.is-active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    display: block;
+    padding: 12px 16px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+    background-color: #550000;
+    color: #FFD54F;
+  }
 }
 /* ── 2. Common Typography & Structural Blocks ── */
 .container { width: 100%; max-width: 1100px; margin: 36px auto; padding: 0 20px; flex: 1 0 auto; }
