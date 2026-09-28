@@ -1265,31 +1265,46 @@ h3.year-header {
 /* ── Mobile Fixes for the Front Page Hero Section ── */
 @media (max-width: 768px) {
   .hero-centered-banner {
-    padding: 40px 15px 50px 15px !important; 
-    min-height: 650px !important; /* Bulletproof fixed height so it never collapses again */
-    height: max-content !important; /* Forces the box to wrap all the text perfectly */
-  }
-  
-  .hero-title-center {
-    font-size: 2.1rem !important; 
-  }
-  
-  .hero-motto-devanagari {
-    font-size: 1.4rem !important;
+    padding: 30px 15px 40px 15px !important; 
+    height: auto !important;
+    min-height: unset !important; /* Clears out conflicting heights */
   }
   
   .hero-content {
-    gap: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
     width: 100% !important;
   }
+
+  .hero-title-center {
+    font-size: 1.9rem !important; /* Scaled down slightly to fit mobile width */
+    line-height: 1.2 !important;
+  }
   
+  .hero-motto-devanagari {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-emblem-center {
+    width: 120px !important; /* Slightly smaller logo for mobile */
+  }
+  
+  .hero-verses-center {
+    flex-direction: column !important; /* Stacks the two shloka cards vertically */
+    gap: 15px !important;
+    width: 100% !important;
+  }
+
   .verse-card-center {
-    padding: 16px 12px !important;
+    padding: 14px 10px !important;
     width: 100% !important;
   }
   
   .verse-text-devanagari {
-    font-size: 1.25rem !important;
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
   }
 
   /* Allows long shlokas to naturally wrap on small screens */
