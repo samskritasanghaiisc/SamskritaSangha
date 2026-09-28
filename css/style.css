@@ -1265,10 +1265,10 @@ h3.year-header {
 /* ── Mobile Fixes for the Front Page Hero Section ── */
 @media (max-width: 768px) {
   .hero-centered-banner {
-    display: block !important; /* Turns off flexbox to prevent height collapsing */
-    min-height: 100% !important; /* Universal fallback for height */
+    display: block !important; 
+    min-height: auto !important; /* Forces the box to shrink-wrap the content */
     height: auto !important;
-    padding: 40px 15px 60px 15px !important; 
+    padding: 40px 15px 40px 15px !important; 
   }
   
   .hero-content {
