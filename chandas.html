@@ -3,37 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chandas & Prosody — Samskrita Sangha IISc</title>
-  <link rel="stylesheet" href="css/style.css?v=57">
+  <title>Weekly Classes — Samskrita Sangha IISc</title>
+  <link rel="stylesheet" href="css/style.css?v=58">
   <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
 
   <style>
-  /* Standard body and text fonts matching other pages */
-  body, p, li, table, .def-note, .def-title, strong {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-    font-weight: normal;
-  }
-
-  /* Make sure headings use clean sans-serif matching classes.html */
-  h2, .block-title {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    color: var(--maroon-deep) !important;
-  }
-
-  /* Keep Devanagari text strictly in Noto Serif Devanagari */
-  .def-sanskrit, .devanagari-text {
-    font-family: 'Noto Serif Devanagari', serif !important;
-  }
-</style>
-  <style>
-    .container {
-      max-width: 1100px !important;
-    }
+    /* ── Custom Styling for Tarka Definitions ── */
     .definition-container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -46,6 +24,11 @@
       border-radius: 6px;
       padding: 24px 28px;
       box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-left-color 0.2s ease;
+    }
+    .def-card:hover {
+      transform: translateY(-2px);
+      border-left-color: var(--saffron-terracotta);
     }
     .def-title {
       font-family: 'Segoe UI', system-ui, sans-serif;
@@ -65,16 +48,9 @@
       line-height: 1.6;
     }
     .def-note {
-      font-size: 1.2rem;
+      font-size: 1.02rem;
       color: var(--text-dark);
       line-height: 1.6;
-    }
-    .verse-box {
-      background: #FFFDF8;
-      border: 1px dashed var(--border-subtle);
-      padding: 16px;
-      border-radius: 6px;
-      margin: 12px 0;
     }
   </style>
 </head>
@@ -100,160 +76,54 @@
 </header>
 
 <main class="container">
-  <!-- Back Link -->
-  <div style="margin-bottom: 20px;">
-    <a href="classes.html" style="font-weight: 700; color: var(--maroon-deep); text-decoration: none;">← Back to Weekly Classes</a>
-  </div>
-
   <div style="text-align: center; margin-bottom: 40px;">
-    <span class="section-label">Prosody & Meter Analysis</span>
-    <h1 class="page-title"><span class="devanagari-text">छन्दः शास्त्रम्</span> <br><span style="font-size: 2.2rem; color: var(--maroon-deep);">Chandas in Sanskrit Poetry</span></h1>
-    <p class="page-subtitle" style="margin-top: 8px;">Exploring matras, ganas, and classical meters studied across our text reading sessions.</p>
-    <div style="width: 60px; height: 3px; background: var(--saffron-terracotta); margin: 12px auto 0; border-radius: 2px;"></div>
+    <span class="section-label">Swadhyaya & Textual Analysis</span>
+    <h1 class="page-title">Weekly Classes <span class="devanagari-text" style="font-size: 2.2rem; color: var(--maroon-deep);">(साप्ताहिक-वर्गाः)</span></h1>
+    <p class="page-subtitle" style="margin-top: 8px;">We have tried to present in a lucid form whatever we have learnt from the weekly classes tutored by our mentor Shri Shankararama Sharma ji.</p>
+    
+    <!-- WhatsApp Invitation Link -->
+    <p style="margin-top: 10px; font-size: 1.05rem; color: var(--text-dark);">
+      Join our WhatsApp to get updates on weekly classes — <a href="https://chat.whatsapp.com/JSRgm77b3J9LOLZXSMdBfJ" target="_blank" rel="noopener noreferrer" style="color: var(--saffron-terracotta); font-weight: 700; text-decoration: none;">click here ↗</a>
+    </p>
+
+    <div style="width: 60px; height: 3px; background: var(--saffron-terracotta); margin: 16px auto 0; border-radius: 2px;"></div>
   </div>
 
-  <!-- 1. Introduction & Matras -->
-  <div class="home-block">
-    <div class="block-header">
-      <span class="section-label">Foundations</span>
-      <h2 class="block-title" style="font-size: 1.8rem;">1. Introduction to Matras <span class="devanagari-text">(मात्राः)</span></h2>
-    </div>
-    <div class="def-card">
-      <p class="def-note" style="margin-bottom: 14px;">
-        We will see about matras first before going to chandas.
-      </p>
-      <div class="verse-box">
-        <div class="def-sanskrit">सानुस्वारो विसर्गान्तो दीर्गो युक्तपर्श्च यः।<br>वा पदान्ते त्वसौ ग्वक्रः ज्ञेयः अन्यो मत्रिको लृजु।।</div>
+  <!-- Interactive Text Tiles Grid -->
+  <div class="grid-container" style="margin-top: 30px;">
+    
+    <!-- Tile 1: Tarka Sangraha (Current) -->
+    <a href="tarka.html" class="card" style="text-decoration: none; border-top: 5px solid var(--maroon-deep); display: block;">
+      <div class="card-body">
+        <span class="card-date">Current Text</span>
+        <h3 class="card-title" style="font-size: 1.4rem; color: var(--maroon-deep);">Tarka Sangraha</h3>
+        <p class="card-text">Authored by Annambhatta, this foundational text covers Nyaya-Vaisheshika epistemology, core definitions, and logic frameworks.</p>
+        <span class="card-action-link" style="margin-top: 12px; display: inline-block;">View Definitions & Notes →</span>
       </div>
-      
-      <!-- Applied class here -->
-      <p class="chandas-note-title" style="margin-top: 16px;">
-        A Guru (Guru - Long / Gvakra) matra is assigned in the following 5 cases:
-      </p>
-      
-      <!-- Applied class here -->
-      <ul class="chandas-bullet-list">
-        <li><strong>सानुस्वारः (Anusvara):</strong> If it has an anusvara (e.g., अं).</li>
-        <li><strong>विसर्गान्तः (Visarga):</strong> If it has a visarga (e.g., अः).</li>
-        <li><strong>दीर्गः (Long Vowels):</strong> Letters with long vowels like आ, ई, ऊ, etc.</li>
-        <li><strong>युक्तपरः (Consonant Cluster):</strong> If the next letter is part of a compound consonant cluster, the preceding letter becomes guru.</li>
-        <li><strong>पदान्तः (End of Pada/Line):</strong> The last letter of a poem line, even if it has a short vowel, is generally considered guru in poetic context.</li>
-      </ul>
-      
-      <!-- Applied class here -->
-      <p class="chandas-note-title">
-        Lruju (Laghu - Short): Any vowel/syllable that does not satisfy the Guru criteria is classified as Laghu.
-      </p>
-    </div>
-  </div>
+    </a>
 
-  <!-- 2. Ganas -->
-  <div class="home-block">
-    <div class="block-header" style="margin-top: 40px;">
-      <span class="section-label">Prosodic Units</span>
-      <h2 class="block-title" style="font-size: 1.8rem;">2. Understanding Ganas <span class="devanagari-text">(गणाः)</span></h2>
-    </div>
-    <div class="def-card">
-      <p class="chandas-note-title" style="margin-bottom: 12px; font-weight: normal;">
-        Before examining specific meters, we analyze three-syllable groups known as Ganas, memorized via the mnemonic:
-      </p>
-      <div class="verse-box" style="text-align: center;">
-        <span class="def-sanskrit" style="font-size: 1.6rem;">य -मा -ता -रा -ज -भा -न -स -ल -गं</span>
-        <div style="font-family: monospace; font-size: 1.1rem; color: var(--text-muted); margin-top: 6px;">1 &nbsp; 2 &nbsp; 2 &nbsp; 2 &nbsp; 1 &nbsp; 2 &nbsp; 1 &nbsp; 1 &nbsp; 1 &nbsp; 2</div>
+    <!-- Tile 2: Raghuvamsham (Previous) -->
+    <a href="raghuvamsham.html" class="card" style="text-decoration: none; border-top: 5px solid var(--saffron-terracotta); display: block;">
+      <div class="card-body">
+        <span class="card-date">Previous Text</span>
+        <h3 class="card-title" style="font-size: 1.4rem; color: var(--maroon-deep);">Raghuvamsham</h3>
+        <p class="card-text">A masterpiece epic by Mahakavi Kalidasa, detailing the noble lineages and lives of the Ikshvaku dynasty kings.</p>
+        <span class="card-action-link" style="margin-top: 12px; display: inline-block;">View Shlokas & Verses →</span>
       </div>
-      <p class="chandas-note-title" style="margin-top: 16px; color: var(--maroon-deep);">Tri-syllable Gana Classifications (1 = Laghu, 2 = Guru):</p>
-      <ul class="chandas-bullet-list">
-        <li><strong>Yagana (<span class="devanagari-text">यगण</span>):</strong> 1-2-2 (Laghu-Guru-Guru)</li>
-        <li><strong>Magana (<span class="devanagari-text">मगण</span>):</strong> 2-2-2 (Guru-Guru-Guru)</li>
-        <li><strong>Tagana (<span class="devanagari-text">तगण</span>):</strong> 2-2-1 (Guru-Guru-Laghu)</li>
-        <li><strong>Ragana (<span class="devanagari-text">रगण</span>):</strong> 2-1-2 (Guru-Laghu-Guru)</li>
-        <li><strong>Jagana (<span class="devanagari-text">जगण</span>):</strong> 1-2-1 (Laghu-Guru-Laghu)</li>
-        <li><strong>Bhagana (<span class="devanagari-text">भगान</span>):</strong> 2-1-1 (Guru-Laghu-Laghu)</li>
-        <li><strong>Nagana (<span class="devanagari-text">नगण</span>):</strong> 1-1-1 (Laghu-Laghu-Laghu)</li>
-        <li><strong>Sagana (<span class="devanagari-text">सगण</span>):</strong> 1-1-2 (Laghu-Laghu-Guru)</li>
-      </ul>
-      <p class="chandas-note-title" style="margin-top: 12px; font-weight: normal;">
-        <em>Example:</em> Consider the three-syllable word <span class="devanagari-text">पञ्चमं</span>. The syllable split is 2-1-2, hence it belongs to <strong>Ragana (<span class="devanagari-text">रगण</span>)</strong>.
-      </p>
-    </div>
-  </div>
+    </a>
 
-  <!-- 3. Sloka (Anushtup) -->
-  <div class="home-block">
-    <div class="block-header" style="margin-top: 40px;">
-      <span class="section-label">Anushtup</span> <span class="devanagari-text">(अनुष्टुप्)</span>
-      <h2 class="block-title" style="font-size: 1.8rem;">3. Sloka  <span class="devanagari-text"> (श्लोकः)</span></h2>
-    </div>
-    <div class="def-card">
-      <p class="chandas-note-title" style="margin-bottom: 12px; font-weight: normal;">
-         An Anushtup verse generally has 4 padas (quarters), each with 8 letters, summing to 32 letters. To be classified strictly as a <em>Sloka</em>, it must satisfy:
-      </p>
-      <div class="verse-box">
-        <div class="def-sanskrit">श्लोके षष्ठं गुरुज्ञेयं पञ्चमं लघु सर्वदा。<br>द्वितीय तुर्ययो: ह्रस्वं सप्तमम् गुरु च अनयता।।</div>
+    <!-- Tile 3: Lilavati (Earlier) -->
+    <a href="chandas.html" class="card" style="text-decoration: none; border-top: 5px solid #2E7D32; display: block;">
+      <div class="card-body">
+        <span class="card-date">Earlier Text</span>
+        <h3 class="card-title" style="font-size: 1.4rem; color: var(--maroon-deep);">Chandas</h3>
+        <p class="card-text">Identify the meters in which the slokas are written.</p>
+        <span class="card-action-link" style="margin-top: 12px; display: inline-block;">View Mathematical Rules →</span>
       </div>
-      <ul class="chandas-bullet-list" style="margin-top: 14px;">
-        <li><strong>6th letter</strong> of every pada is always Guru.</li>
-        <li><strong>5th letter</strong> of every pada is always Laghu.</li>
-        <li>In the <strong>2nd and 4th pada</strong>, the 7th letter is always Laghu (Hrasva).</li>
-      </ul>
-    </div>
-  </div>
+    </a>
 
-  <!-- 4. Shardulavikreedita -->
-  <div class="home-block">
-    <div class="block-header" style="margin-top: 40px;">
-      <span class="section-label">Classical Meter</span>
-      <h2 class="block-title" style="font-size: 1.8rem;">4. Shardulavikreedita (<span class="devanagari-text">शार्दूलविक्रीडितम्</span>)</h2>
-    </div>
-    <div class="def-card">
-      <p class="chandas-note-title" style="margin-bottom: 10px; font-weight: normal;">
-        Shardulavikreedita is a 19-letter chandas per quarter. Defined by the mnemonic:
-      </p>
-      <div class="verse-box">
-        <div class="def-sanskrit">सूर्याश्वैर्मसजस्तताः सगुरवः शार्दूलविक्रीडितम्।</div>
-      </div>
-      <p class="chandas-note-title" style="margin-top: 12px; font-weight: normal;">
-        Here, Surya = 12, Ashwa = 7 (total 19 letters). The ganas follow the order: <strong>Magana, Sagana, Jagana, Sagana, Tagana, Tagana + 1 Guru</strong> (मसजस्तताः + सः + गुरवः).
-      </p>
-    </div>
   </div>
-
-  <!-- 5. Indravajra, Upendravajra & Upajaathi -->
-  <div class="home-block">
-    <div class="block-header" style="margin-top: 40px;">
-      <span class="section-label">11-Letter Meters</span>
-      <h2 class="block-title" style="font-size: 1.8rem;">5. Indravajra <span class="devanagari-text"> (इन्द्रवज्रा)</span>, Upendravajra <span class="devanagari-text"> (उपेन्द्रवज्रा)</span> & Upajaathi <span class="devanagari-text"> (उपजाति:)</span></h2>
-    </div>
-    <div class="def-card">
-      <p class="chandas-note-title" style="margin-bottom: 12px; font-weight: normal;">
-        These are 11-letter meters per pada:
-      </p>
-      <ul class="chandas-bullet-list">
-        <li><strong>Indravajra:</strong> <span class="devanagari-text" style="color: var(--maroon-deep);">स्यादिन्द्रवज्रा यदि तौ जगौ गः।</span> (Tagana, Tagana, Jagana + 2 Gurus).</li>
-        <li><strong>Upendravajra:</strong> <span class="devanagari-text" style="color: var(--maroon-deep);">उपेन्द्रवज्रा जगतजा ततो गौ।</span> (Jagana, Tagana, Jagana + 2 Gurus). <em>The only difference from Indravajra is the first letter.</em></li>
-        <li><strong>Upajaathi:</strong> A verse with 11 letters per pada that mixes Indravajra and Upendravajra lines. (For instance, the second sloka of Lilavati is an Upajaati).</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 6. Other Notable Meters & Matra Chandas -->
-  <div class="home-block">
-    <div class="block-header" style="margin-top: 40px;">
-      <span class="section-label">Overview</span>
-      <h2 class="block-title" style="font-size: 1.8rem;">6. Other Meters & Matra Chandas</h2>
-    </div>
-    <div class="def-card">
-      <ul class="chandas-bullet-list">
-        <li><strong>Trotaka (<span class="devanagari-text">तोतकम्</span>):</strong> 12-letter verses (4 Saganas - 112 / LLG), seen in Totakashtakam, Venkatesha Stotram, and Kalinga mardanam of Narayaneeyam.</li>
-        <li><strong>Sragdhara (<span class="devanagari-text">स्रग्धरा</span>):</strong> 21-letter verses structured as (7+7+7).</li>
-        <li><strong>Kusumamanjari:</strong> Seen in the Rasakreeda Stotram of Narayaneeyam.</li>
-        <li><strong>Matra Chandas (<span class="devanagari-text">मात्राछन्दसः</span>):</strong> Unlike Akshara chandas where letter counts are fixed, Matra chandas fixes the number of matras. Example: <em>Aryavruttam</em>, which has 12, 18, 12, and 15 matras respectively across its 4 quarters.</li>
-      </ul>
-    </div>
-  </div>
-
 </main>
-
 <footer>
   <p>© 2026 Samskrita Sangha, Indian Institute of Science, Bengaluru</p>
 </footer>
