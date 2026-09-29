@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Samskrita Sangha IISc</title>
+  <link rel="stylesheet" href="css/style.css?v=50">
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+  <style>
+    /* Responsive image gallery styles */
+    .about-gallery {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .about-gallery-img {
+      flex: 1 1 calc(50% - 12px);
+      min-width: 300px;
+      max-width: 550px;
+    }
+    .about-gallery-img img {
+      width: 100%;
+      height: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: var(--shadow-card, 0 4px 18px rgba(106, 0, 0, 0.08));
+      border: 1px solid var(--border-subtle, rgba(106, 0, 0, 0.15));
+      transition: transform 0.3s ease;
+    }
+    .about-gallery-img img:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation Header ── -->
+<header class="site-header">
+  <nav class="main-nav">
+    <a href="index.html" class="logo-container">
+      <img src="images/logo.png" alt="Samskrita Sangha Logo" class="site-logo">
+      <span class="logo-text">संस्कृतसङ्घः IISc</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="talks.html">Invited Talks</a></li>
+      <li><a href="activities.html">Events & Gallery</a></li>
+      <li><a href="classes.html">Weekly Classes</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="http://web.archive.org/web/20170722154224/http://ssangha.sanskritdocuments.org/home/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer" class="archive-link">Archives ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── Main Content Container ── -->
+<main class="container">
+  <div style="text-align: center; margin-bottom: 30px;">
+    <span class="section-label">Our Vision & Purpose</span>
+    <h1 class="page-title">About Samskrita Sangha</h1>
+    <div style="width: 60px; height: 3px; background: var(--saffron-terracotta); margin: 12px auto 0; border-radius: 2px;"></div>
+  </div>
+
+  <!-- Group Photo Gallery -->
+
+
+  <div class="about-gallery">
+    <div class="about-gallery-img">
+      <!-- Ensure 9.jpg is placed in your images folder -->
+      <img src="images/group_photo/9.jpg" alt="Samskrita Sangha Group Gathered Together">
+    </div>
+    <div class="about-gallery-img">
+      <!-- Ensure the converted 10.png is placed in your images folder -->
+      <img src="images/group_photo/10.png" alt="Samskrita Sangha Members at IISc Main Building">
+    </div>
+  </div>
+
+  <!-- Primary Mission Lead Card -->
+  <div class="card" style="border-left-width: 6px; margin-bottom: 35px;">
+    <div class="card-body" style="padding: 30px;">
+      <p style="font-size: 1.15rem; color: #1C252C; line-height: 1.8; font-weight: 500;">
+        <strong>Samskrita Sangha</strong> at the Indian Institute of Science, Bengaluru, is dedicated to preserving, celebrating, and exploring the Sanskrit language - one of the world's richest intellectual and literary traditions. 
+      </p>
+      <p style="font-size: 1.15rem; color: #37474F; line-height: 1.7; margin-top: 10px;">
+        Our mission is to learn and make Sanskrit more accessible, moving beyond pure grammar drills to cultivate an appreciation for classical poetics, computational linguistics, scientific treatises, and timeless philosophical literature.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3 Pillars Grid -->
+  <div class="home-block">
+    <div class="block-header">
+      <span class="section-label">Core Pursuits</span>
+      <h2 class="block-title" style="font-size: 1.7rem;">What We Do</h2>
+    </div>
+
+    <div class="why-samskritam-box" style="border-left-color: var(--saffron-terracotta);">
+      <ul class="objective-list">
+        <li><strong>Active Communication:</strong> Conducting 10-day intensive spoken Sanskrit workshops (संभाषणशिबिरम्) in collaboration with Samskrita Bharati to build conversational fluency.</li>
+        <li><strong>Study Circles:</strong> Hosting weekly reading groups to dissect foundational shastras, poetics, and the Bhagavad Gita through rigorous padachheda and anvaya breakdown.</li>
+        <li><strong>Distinguished Lectures:</strong> Inviting scholars and scientists for public talks exploring Indian mathematics, logic (Nyaya), and ancient scientific literature.</li>
+        <li><strong>Other Activities:</strong> We have started an initiative to promote the reading of Ramayana by conducting quiz competitions and performing a Nataka on Valmiki Ramayana. We also conduct parayana of the Bhagavad Gita during Gita Jayanthi.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="home-block mentor-section">
+    <div class="block-header">
+      <span class="section-label">Guidance & Inspiration</span>
+      <h2 class="block-title" style="font-size: 1.85rem;">About Our Mentor</h2>
+    </div>
+
+    <div class="card mentor-card">
+      <div class="mentor-layout">
+        
+        <!-- Bio Content (Left Aligned) -->
+        <div class="mentor-bio">
+          <h3 class="mentor-name">Shri Shankararama Sharma</h3>
+          <span class="mentor-title">Techno-Linguistic Scholar & Doctoral Researcher, IISc</span>
+          
+          <p class="mentor-text">
+            Shri Shankararama Sharma is an enthusiast of technology, Sanskrit, Vedanta, and outdoor sports, exemplifying a seamless blend of cutting-edge modern science and profound traditional learning. Currently pursuing his PhD at IISc, Bengaluru, he specializes in Applications of AI in Healthcare. He has interned at IIT Guwahati and National Instruments, and collaborated with University College London (UCL) to develop AI models for NMR signal processing.
+          </p>
+
+          <p class="mentor-text">
+            As a Techno-linguistic scholar at Vyoma Linguistic Labs, he contributes extensively to course design in both Sanskrit and English while spearheading the integration of technology into day-to-day traditional pedagogy. He has also delivered numerous guest lectures across premier institutions on artificial intelligence, mathematics, and Indian knowledge systems.
+          </p>
+
+          <p class="mentor-text">
+            His foundation in Samskritam began at the age of four with the Bhagavad Gita and stotras taught by his mother. Under the guidance of his maternal grandfather, Mahamahopadhyaya Dr. Krishnamurthi Sastrigal, he earned a Master’s degree in Advaita Vedanta from Karnataka Samskrit University. Concurrently, he completed the rigorous traditional adhyayana of the Krishna Yajur Veda under the tutelage of his paternal grandfather, Sri Ramalinga Sarma.
+          </p>
+
+          <p class="mentor-text">
+            His spiritual journey includes conducting Ramayana Navahams, Bhagavata Saptahams, and Vedantic discourses across India and the United States, having received the sacred blessings of the esteemed Jagadgurus of Sringeri and Kanchi.
+          </p>
+        </div>
+
+        <!-- Mentor Portrait Frame (Right Aligned) -->
+        <div class="mentor-image-wrap">
+          <div class="mentor-frame">
+            <img src="images/sr_anna.jpg" 
+                 alt="Shri Shankararama Sharma" 
+                 class="mentor-photo"
+                 onerror="this.src='images/sr_anna.jpeg';">
+          </div>
+          <span class="mentor-caption">Shri Shankararama Sharma</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>© 2026 Samskrita Sangha, Indian Institute of Science, Bengaluru</p>
+</footer>
+
+</body>
+</html>

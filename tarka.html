@@ -52,6 +52,38 @@
       color: var(--text-dark);
       line-height: 1.6;
     }
+
+    /* ── Resource Tabs Box Styling ── */
+    .resource-tabs-box {
+      max-width: 700px;
+      margin: 20px auto 0 auto;
+      background: var(--card-white);
+      border: 1.5px solid var(--border-subtle);
+      border-left: 6px solid var(--maroon-deep);
+      border-radius: 8px;
+      padding: 18px 24px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .resource-tab-link {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--maroon-deep);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      background: var(--bg-gold-tint);
+    }
+    .resource-tab-link:hover {
+      background: var(--maroon-deep);
+      color: #FFFFFF;
+    }
   </style>
 </head>
 <body>
@@ -76,11 +108,18 @@
 </header>
 
 <main class="container">
-  <div style="text-align: center; margin-bottom: 40px;">
+  <div style="text-align: center; margin-bottom: 30px;">
     <span class="section-label">Swadhyaya & Textual Analysis</span>
     <h1 class="page-title">Weekly Classes <span class="devanagari-text" style="font-size: 2.2rem; color: var(--maroon-deep);">(साप्ताहिक-वर्गाः)</span></h1>
     <p class="page-subtitle" style="margin-top: 8px;">Key definitions, epistemological concepts, and logical frameworks studied during our weekly sessions.</p>
-    <div style="width: 60px; height: 3px; background: var(--saffron-terracotta); margin: 12px auto 0; border-radius: 2px;"></div>
+    
+    <!-- Quick Resource Tabs Box -->
+    <div class="resource-tabs-box">
+      <a href="https://tarkasangraha.com/" target="_blank" rel="noopener noreferrer" class="resource-tab-link">Read Tarka Sangraha Online ↗</a>
+      <a href="tarka_notes.pdf" target="_blank" rel="noopener noreferrer" class="resource-tab-link">Download Notes (PDF)</a>
+    </div>
+
+    <div style="width: 60px; height: 3px; background: var(--saffron-terracotta); margin: 24px auto 0; border-radius: 2px;"></div>
   </div>
 
   <!-- Tarka Sangraha Core Definitions Section -->
@@ -162,14 +201,14 @@
         <div class="def-note">Quality is that which posseses generality while at the same time being quite different from substance and actions. Or which posseses the generic atribute, qualityness.</div>
       </div>
 
-            <!-- 11 -->
+      <!-- 11 -->
       <div class="def-card">
         <div class="def-title">Definition of Karma</div>
         <div class="def-sanskrit">संयोगभिन्नत्वे सति संयोगासमवायिकारणं कर्म। कर्मत्वजातिमद्वा</div>
         <div class="def-note">Action is non inherent cause of conjunction while being quite different from conjunction. Or that which posseses the genus of action.</div>
       </div>
 
-                  <!-- 12 -->
+      <!-- 12 -->
       <div class="def-card">
         <div class="def-title">Definition of Gandha (Refined)</div>
         <div class="def-sanskrit">गन्धसमानाधिकरणद्रव्यत्वापरजातिमत्त्वस्य विवक्षितत्वात्</div>
@@ -180,37 +219,35 @@
         <div class="def-title">Definition of Nityatva and Anityatva</div>
         <div class="def-sanskrit"> नित्यत्वं ध्वंसाप्रतियोगित्वम्। अनित्यत्वं ध्वंसप्रतियोगित्वम्। </div>
         <div class="def-note">Eternality is being non liable to destruction. Non-eternality is being liable to destruction</div>
-    </div>
+      </div>
 
       <div class="def-card">
         <div class="def-title">Definition of Body</div>
         <div class="def-sanskrit"> आत्मनो भोगायतनं शरीरम्। यदवच्छिन्नात्मनि भोगो जायते तद्भोगायतनम्। सुखदुःखान्यतरसाक्षात्कारो भोगः। </div>
         <div class="def-note"> Body is the seat of the soul for experiences. That which delimits the soul in which enjoyment takes place, is the seat of enjoyment. Enjoyment is immediate experience of pleasure or pain. </div>
-    </div>
+      </div>
 
       <div class="def-card">
         <div class="def-title">Definition of Organ</div>
-        <div class="def-sanskrit">  शब्देतरोद्भूतविशेषगुणानाश्रयत्वे सति ज्ञानकारणमनस्संयोगाश्रयत्वमिन्द्रियत्वम् </div>
+        <div class="def-sanskrit"> शब्देतरोद्भूतविशेषगुणानाश्रयत्वे सति ज्ञानकारणमनस्संयोगाश्रयत्वमिन्द्रियत्वम् </div>
         <div class="def-note">Organ is the substratum of contact with mind which causes knowledge, while not being the substratum of any manifested special quality except sound.</div>
-    </div>
+      </div>
 
-     <div class="def-card">
+      <div class="def-card">
         <div class="def-title">Definition of Object</div>
         <div class="def-sanskrit"> शरीरेन्द्रियभिन्नो विषयः </div>
         <div class="def-note"> Object is which is different from organ and body. </div>
-    </div>
+      </div>
 
-         <div class="def-card">
+      <div class="def-card">
         <div class="def-title">Definition of Water</div>
         <div class="def-sanskrit"> शीतस्पर्शसमानाधिकरणद्रव्यत्वापरजातिमत्त्वं </div>
         <div class="def-note"> Water is that which is having generic attribute which is less comprehensive than substanceness, and which has the same substratum with cold touch</div>
+      </div>
+
     </div>
 
-  
-
   </div>
-
-
 
 </main>
 
