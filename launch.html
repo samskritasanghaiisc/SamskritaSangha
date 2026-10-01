@@ -225,25 +225,25 @@
     <div class="opening-text">शुभमस्तु • Opening Portal...</div>
   </div>
 
-<script>
+  <!-- Local Audio File for Bell Sound -->
+  <audio id="bellAudio" preload="auto" src="images/bell.mp3"></audio>
+
+  <script>
     function inaugurate() {
       // 1. Trigger curtain animation
       document.body.classList.add('is-opened');
 
-      // 2. Play subtle chime
-      try {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.frequency.setValueAtTime(528, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 1.8);
-      } catch (e) {
-        // Fallback silently
+      // 2. Play the bell sound (plays first 4 seconds)
+      const audio = document.getElementById('bellAudio');
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch(e => console.log('Audio playback prevented:', e));
+
+        // Stop audio after 4 seconds
+        setTimeout(() => {
+          audio.pause();
+          audio.currentTime = 0;
+        }, 4000);
       }
 
       // 3. Redirect to official site
