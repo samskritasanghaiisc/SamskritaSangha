@@ -9,13 +9,80 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
 <!-- Place the width expansion style block right here inside the <head> -->
   <style>
-    /* Expand the container width specifically for the Raghuvamsham page */
-    .container {
-      max-width: 1200px !important;
+      /* ── Custom Styling for Tarka Definitions ── */
+    .definition-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
-    /* Ensure the sloka column has enough breathing room so verses stay on 2 clean lines */
-    .activity-table td:nth-child(2) {
-      min-width: 340px !important;
+    .def-card {
+      background: var(--card-white);
+      border: 1.5px solid var(--border-subtle);
+      border-left: 5px solid var(--maroon-deep);
+      border-radius: 6px;
+      padding: 24px 28px;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-left-color 0.2s ease;
+    }
+    .def-card:hover {
+      transform: translateY(-2px);
+      border-left-color: var(--saffron-terracotta);
+    }
+    .def-title {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--saffron-terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+    .def-sanskrit {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--maroon-deep);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .def-note {
+      font-size: 1.02rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* ── Resource Tabs Box Styling ── */
+    .resource-tabs-box {
+      max-width: 700px;
+      margin: 20px auto 0 auto;
+      background: var(--card-white);
+      border: 1.5px solid var(--border-subtle);
+      border-left: 6px solid var(--maroon-deep);
+      border-radius: 8px;
+      padding: 18px 24px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .resource-tab-link {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--maroon-deep);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      background: var(--bg-gold-tint);
+    }
+    .resource-tab-link:hover {
+      background: var(--maroon-deep);
+      color: #FFFFFF;
     }
   </style>
 </head>
