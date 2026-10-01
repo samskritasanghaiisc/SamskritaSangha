@@ -1349,3 +1349,11 @@ body, p, li, table, .def-card, .def-note, .chandas-bullet-list, .chandas-note-ti
 .devanagari-text, .def-sanskrit {
   font-family: 'Noto Serif Devanagari', serif !important;
 }
+.image-footnote {
+  font-size: 0.85em;
+  color: #666;
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
+  line-height: 1.2;
+}
